@@ -2,5 +2,10 @@
 
 internal class Present
 {
-    public string Name { get; set; }
+    public Present(string name)
+    {
+        Name = name;
+    }
+
+    public string Name { get; }
 }
