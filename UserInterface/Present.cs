@@ -1,11 +1,13 @@
-﻿namespace UserInterface;
-
-internal class Present
+﻿namespace UserInterface
 {
-    public Present(string name)
-    {
-        Name = name;
-    }
 
-    public string Name { get; }
+    internal class Present
+    {
+        public Present(string name)
+        {
+            Name = name;
+        }
+
+        public string Name { get; }
+    }
 }

@@ -1,18 +1,22 @@
 ﻿using System.Collections.Concurrent;
 
-namespace UserInterface;
-
-internal class Sleigh
+namespace UserInterface
 {
-    public Sleigh()
-    {
-        this.Presents = new ConcurrentBag<Present>();
-    }
 
-    public ConcurrentBag<Present> Presents { get;  }
 
-    public void Pack(Present present)
+
+    internal class Sleigh
     {
-        Presents.Add(present);
+        public Sleigh()
+        {
+            this.Presents = new ConcurrentBag<Present>();
+        }
+
+        public ConcurrentBag<Present> Presents { get; }
+
+        public void Pack(Present present)
+        {
+            Presents.Add(present);
+        }
     }
 }

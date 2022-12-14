@@ -1,20 +1,22 @@
-﻿namespace UserInterface;
-
-internal class Elf
+﻿namespace UserInterface
 {
-    private readonly Sleigh _sleigh;
 
-    public Elf(Sleigh sleigh)
+    internal class Elf
     {
-        _sleigh = sleigh;
-    }
+        private readonly Sleigh _sleigh;
 
-    public string ReceivePresent(Present present)
-    {
-        var rnd = new Random();
-        var sleepMilliseconds = rnd.Next(500, 3000);
-        Thread.Sleep(sleepMilliseconds);
-        _sleigh.Pack(present);
-        return $"Packed: {present.Name}";
+        public Elf(Sleigh sleigh)
+        {
+            _sleigh = sleigh;
+        }
+
+        public string ReceivePresent(Present present)
+        {
+            var rnd = new Random();
+            var sleepMilliseconds = rnd.Next(500, 3000);
+            Thread.Sleep(sleepMilliseconds);
+            _sleigh.Pack(present);
+            return $"Packed: {present.Name}";
+        }
     }
 }
