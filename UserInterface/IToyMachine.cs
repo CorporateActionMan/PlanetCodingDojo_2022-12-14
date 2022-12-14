@@ -1,6 +1,8 @@
-﻿namespace UserInterface;
-
-internal interface IToyMachine
+﻿namespace UserInterface
 {
-    Present Generate();
+
+    internal interface IToyMachine
+    {
+        Present Generate();
+    }
 }
